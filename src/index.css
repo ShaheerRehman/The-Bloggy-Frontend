@@ -1,13 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.loader {
+  border-color: rgb(240, 240, 240) rgb(210, 195, 195) #0000 !important;
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation16.MuiDrawer-paper {
+  width: 25%;
+  min-width: 150px;
+  align-items: center;
+  background-image: linear-gradient(
+    to right top,
+    #49bff5,
+    #3bb4ee,
+    #2ea8e8,
+    #209de0,
+    #1391d9,
+    #1c82c6,
+    #1f73b3,
+    #2064a0,
+    #234f7f,
+    #203c60,
+    #1a2942,
+    #111827
+  );
+}
+
+.MuiTypography-root.MuiTypography-body1.MuiListItemText-primary.css-10hburv-MuiTypography-root {
+  color: white;
 }
