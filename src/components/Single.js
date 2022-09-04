@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Container, CssBaseline, Typography, Box } from "@mui/material";
+import { Container, Typography, Box } from "@mui/material";
 import axiosInstance from "../Axios";
 import { useParams } from "react-router-dom";
-import ApiContext from "./ApiContext";
-import { useContext } from "react";
 
 export default function Post() {
-  // const [api] = useContext
   const { slug } = useParams();
   const [data, setData] = useState({ posts: [] });
   useEffect(() => {
