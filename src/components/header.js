@@ -1,19 +1,15 @@
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { useNavigate } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 
 import {
   AppBar,
-  Typography,
   Toolbar,
-  Container,
   useMediaQuery,
   useTheme,
-  Grid,
   Tabs,
   Tab,
-  Box,
   InputBase,
   alpha,
 } from "@mui/material";
@@ -86,8 +82,6 @@ export default function Header() {
   return (
     <AppBar sx={{ background: "#111827" }}>
       <Toolbar>
-        {/* <Container sx={{ display: { sm: "none", xs: "none", md: "flex" } }}> */}
-        {/* <Grid md={4} lg={4}> */}
         <NavLink to="/">
           <img
             style={{ width: "35px", height: "40px", display: "inline-flex" }}
@@ -99,7 +93,6 @@ export default function Header() {
           <SearchIconWrapper>
             <SearchIcon />
           </SearchIconWrapper>
-          {/* {console.log(data.search)} */}
           <form
             onSubmit={(e) => {
               e.preventDefault();
@@ -109,9 +102,6 @@ export default function Header() {
             <StyledInputBase
               value={data.search}
               onChange={(e) => setData({ search: e.target.value })}
-              // onRequestSearch={() => goSearch(data.search)}
-              // onSubmit={() => console.log("submit")}
-              // onRequestSearch={() => console.log(data.search)}
               placeholder="Search…"
               inputProps={{ "aria-label": "search" }}
             />

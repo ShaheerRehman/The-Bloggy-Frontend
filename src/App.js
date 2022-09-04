@@ -16,7 +16,6 @@ function App() {
     if (state.posts.length === 0 || !state.posts) {
       setLoading(true);
     } else {
-      // console.log(state.posts);
       setLoading(false);
     }
   }, [state]);

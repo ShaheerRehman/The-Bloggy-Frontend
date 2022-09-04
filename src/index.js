@@ -4,7 +4,6 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import Header from "./components/Header";
 import Header from "./components/header";
 import { ThemeProvider, createTheme } from "@mui/material";
 import Footer from "./components/Footer";

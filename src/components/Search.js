@@ -7,7 +7,6 @@ export default function Search() {
   const [loading, setLoading] = useState(false);
   const search = "search";
   const [appState, setAppState] = useState({
-    // loading: false,
     search: "",
     posts: [],
   });
@@ -16,7 +15,6 @@ export default function Search() {
     if (appState.posts.length === 0 || !appState.posts) {
       setLoading(true);
     } else {
-      // console.log(state.posts);
       setLoading(false);
     }
   }, [appState]);
