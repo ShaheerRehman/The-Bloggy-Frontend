@@ -15,6 +15,7 @@ import { useState } from "react";
 import ApiContext from "./components/ApiContext";
 import Logout from "./components/Logout";
 import Post from "./components/Single";
+import Search from "./components/Search";
 
 const theme = createTheme({
   palette: {
@@ -40,6 +41,7 @@ const Index = () => {
               <Route path="/logout" element={<Logout />} />
               <Route path="/about" element={<About />} />
               <Route path="/post/:slug" element={<Post />} />
+              <Route path="/search" element={<Search />} />
             </Routes>
             <Footer />
           </ApiContext.Provider>

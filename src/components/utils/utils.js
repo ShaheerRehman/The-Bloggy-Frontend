@@ -1,1 +1,4 @@
-export const headerContent = ["Blogs", "About", "Login", "Register", "Logout"];
+const loggedIn = ["Blogs", "About", "Logout"];
+const loggedOut = ["Blogs", "About", "Login", "Register"];
+
+export { loggedIn, loggedOut };
