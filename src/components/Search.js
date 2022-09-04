@@ -22,7 +22,6 @@ export default function Search() {
     axiosInstance.get(search + "/" + window.location.search).then((res) => {
       const allPosts = res.data;
       setAppState({ posts: allPosts });
-      console.log(res.data);
     });
   }, [setAppState]);
   return loading ? <PostLoading /> : <Posts postdata={appState.posts} />;

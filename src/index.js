@@ -15,11 +15,12 @@ import ApiContext from "./components/ApiContext";
 import Logout from "./components/Logout";
 import Post from "./components/Single";
 import Search from "./components/Search";
+import Error from "./components/NotFound";
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#0000",
+      main: "#017AC0",
     },
   },
 });
@@ -41,6 +42,7 @@ const Index = () => {
               <Route path="/about" element={<About />} />
               <Route path="/post/:slug" element={<Post />} />
               <Route path="/search" element={<Search />} />
+              <Route path="*" element={<Error />} />
             </Routes>
             <Footer />
           </ApiContext.Provider>

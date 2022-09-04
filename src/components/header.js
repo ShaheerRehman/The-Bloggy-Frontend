@@ -72,10 +72,7 @@ export default function Header() {
   const [data, setData] = useState({ search: "" });
   const theme = useTheme();
   const goSearch = () => {
-    navigate({
-      pathname: "/search/",
-      search: "?search=" + data.search,
-    });
+    navigate("/search/?search=" + data.search);
     window.location.reload();
   };
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
@@ -96,11 +93,10 @@ export default function Header() {
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              goSearch(data.search);
+              goSearch();
             }}
           >
             <StyledInputBase
-              value={data.search}
               onChange={(e) => setData({ search: e.target.value })}
               placeholder="Search…"
               inputProps={{ "aria-label": "search" }}
