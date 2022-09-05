@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import PostLoading from "./components/PostLoading";
-import Posts from "./components/Posts";
+import PostLoading from "./components/posts/PostLoading";
+import Posts from "./components/posts/Posts";
 
 function App() {
   const [state, setState] = useState({
-    loading: false,
+    loading: true,
     posts: [],
   });
   const [loading, setLoading] = useState(false);

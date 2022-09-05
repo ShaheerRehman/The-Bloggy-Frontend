@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Container, Typography, Box } from "@mui/material";
-import axiosInstance from "../Axios";
+import axiosInstance from "../../Axios";
 import { useParams } from "react-router-dom";
 
 export default function Post() {

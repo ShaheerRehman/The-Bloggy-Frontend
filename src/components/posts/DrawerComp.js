@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import logo from "../assets/logo.png";
+import logo from "../../assets/logo.png";
 import {
   Drawer,
   IconButton,
@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import { NavLink } from "react-router-dom";
-import { loggedIn, loggedOut } from "./utils/utils";
+import { loggedIn, loggedOut } from "../utils/utils";
 
 export default function DrawerComp() {
   let headerContent = null;
@@ -49,18 +49,16 @@ export default function DrawerComp() {
             return (
               <>
                 <NavLink
+                  key={item}
                   to={sentence}
                   style={({ isActive }) => ({
                     textDecoration: "none",
                     color: isActive ? "#52CDFF" : "",
                   })}
                 >
-                  <ListItemButton
-                    onClick={() => setOpenDrawer(false)}
-                    key={item}
-                  >
+                  <ListItemButton onClick={() => setOpenDrawer(false)}>
                     <ListItemIcon>
-                      <ListItemText>{item}</ListItemText>
+                      <ListItemText key={item}>{item}</ListItemText>
                     </ListItemIcon>
                   </ListItemButton>
                 </NavLink>

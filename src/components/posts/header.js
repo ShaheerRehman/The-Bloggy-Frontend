@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../../assets/logo.png";
 import { useNavigate } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 
@@ -16,7 +16,7 @@ import {
 import DrawerComp from "./DrawerComp";
 import { useEffect, useState } from "react";
 import styled from "@emotion/styled";
-import { loggedIn, loggedOut } from "./utils/utils";
+import { loggedIn, loggedOut } from "../utils/utils";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
